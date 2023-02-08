@@ -31,7 +31,7 @@ const micSchema = new mongoose.Schema(
 )
 
 micSchema.virtual('micInfo').get(function () {
-    return `${this.make} ${this.model} is a ${this.type} microphone`
+    return `The ${this.make} ${this.model} is a ${this.type} microphone`
 })
 
 module.exports = mongoose.model('Mic', micSchema)

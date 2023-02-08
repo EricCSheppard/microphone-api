@@ -28,7 +28,7 @@ const requireToken = passport.authenticate('bearer', { session: false })
 const router = express.Router()
 
 // INDEX
-// GET /micss
+// GET /mics
 router.get('/mics', requireToken, (req, res, next) => {
 	Mic.find()
 		.then((mics) => {

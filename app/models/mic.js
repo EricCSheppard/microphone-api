@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const boxSchema = require('./box')
 
 const micSchema = new mongoose.Schema(
 	{
@@ -12,12 +13,14 @@ const micSchema = new mongoose.Schema(
 		},
         type: {
             type: String,
+            enum: ['Dynamic', 'Condenser', 'Ribbon'],
             required: true,
         },
         phantom: {
             type: Boolean,
             required: true
         },
+        box : [boxSchema],
 		owner: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: 'User',

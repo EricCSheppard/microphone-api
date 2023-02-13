@@ -1,6 +1,6 @@
 # Microphone API
 
-This api will allow the users of our react front-end application to CRUD pets and their toys.
+This api will allow the users of our react front-end application to CRUD mics.
 
 This application uses token authentication instead of sessions.
 
